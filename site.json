@@ -1,0 +1,10 @@
+{
+  "description": "Provides detailed information on Herdwise Animal Wellness projects, benefits, and features with easy user registration via Google Forms for seamless access.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

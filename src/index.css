@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-teal:       #1a4a5c;
+  --color-teal-light: #25677d;
+  --color-teal-dark:  #0f2e38;
+  --color-amber:      #d4820a;
+  --color-amber-light:#f0a030;
+  --color-cream:      #faf6f0;
+  --color-cream-dark: #f0e8d8;
+  --color-warm:       #6b4a2a;
+  --color-sage:       #5a8a7a;
+  --color-charcoal:   #1c1c1e;
+  --font-display: 'Fraunces', serif;
+  --font-body:    'Outfit', sans-serif;
+}
+
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #faf6f0;
+  color: #1c1c1e;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d4820a;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(26,74,92,0.14);
+}
+
+.img-zoom img {
+  transition: transform 0.45s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.benefit-row {
+  transition: background 0.2s, border-color 0.2s;
+}
+.benefit-row:hover {
+  background: rgba(26,74,92,0.04);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.65s ease both; }
